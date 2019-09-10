@@ -1,17 +1,14 @@
 <template>
   <div class="container">
+    <div class="post-container">
+      <PostList v-bind:posts="posts" />
+    </div>
     <div class="heading-container">
-      <nav aria-label="breadcrumb" class="breadcrumb-wrap">
-          <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">All Posts by Users</li>
-          </ol>
-      </nav>
       <button type="submit" class="btn btn-primary btn-lg" @click="ShowForm">Add Post</button>
     </div>
     <div class="form-wrapper" v-if="FormContainer">
       <PostAdd v-on:add-post="addPost" />
     </div>
-    <PostList v-bind:posts="posts" />
   </div>
 </template>
 
@@ -82,5 +79,9 @@ export default {
 }
 button{
   height: 64px;
+}
+.post-container{
+  margin-top: -140px;
+  z-index: 1;
 }
 </style>
