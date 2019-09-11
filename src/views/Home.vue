@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <div class="post-container">
       <PostList v-bind:posts="posts" />
     </div>
@@ -81,7 +81,9 @@ button{
   height: 64px;
 }
 .post-container{
-  margin-top: -140px;
-  z-index: 1;
+    margin: auto;
+    margin-top: -140px;
+    z-index: 1;
+    max-width: 1300px;
 }
 </style>

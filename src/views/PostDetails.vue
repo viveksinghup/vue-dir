@@ -1,5 +1,11 @@
 <template>
     <div class="container">
+        <nav aria-label="breadcrumb" class="breadcrumb-bar">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
+                <li class="breadcrumb-item active" aria-current="page">Post Details</li>
+            </ol>
+        </nav>
         <div class="card-body">
             <h5 class="card-title">{{post.title}}</h5>
             <p class="card-text">{{post.body}}</p>

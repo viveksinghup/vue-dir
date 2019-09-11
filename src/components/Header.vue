@@ -27,12 +27,6 @@
         </div>
       </div>
     </div>
-    <nav aria-label="breadcrumb" v-if="isHomeRoute">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-            <li class="breadcrumb-item active" aria-current="page">Post Details</li>
-        </ol>
-    </nav>
   </div>
 </template>
 
@@ -45,9 +39,9 @@ export default {
     };
   },
   computed: {
-    isHomeRoute() {
-      return this.$router.history.current.name !== 'home'
-    }
+    // isHomeRoute() {
+    //   return this.$router.history.current.name !== 'home'
+    // }
   }
 }
 </script>
@@ -127,11 +121,5 @@ nav{
    max-width: 1140px;
   margin: auto;
   position: relative;
-}
-.breadcrumb{
-      position: absolute;
-    top: 50px;
-    margin: 0px;
-  background-color: transparent
 }
 </style>

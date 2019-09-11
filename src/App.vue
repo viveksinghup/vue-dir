@@ -15,3 +15,19 @@ export default {
   }
 }
 </script>
+<style>
+.breadcrumb-bar{
+      position: absolute;
+    top: -130px;
+  margin: 0px;
+}
+.container{
+  position: relative;
+}
+.breadcrumb{
+background-color: transparent
+}
+.breadcrumb li a{
+  color: #fff;
+}
+</style>

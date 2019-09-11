@@ -35,7 +35,7 @@ export default{
     margin-bottom: 40px;
     max-height: 300px;
     overflow: hidden;
-    border-radius: 4px; 
+    border-radius: 10px;
     transition: 0.45s;
     background-color: #fff;
 }
@@ -48,7 +48,7 @@ export default{
     object-fit: cover;
 }
 .post-desc{
-    padding: 20px 30px;
+    padding: 30px;
 }
 a{
     text-decoration: none;
@@ -59,11 +59,12 @@ a{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: Playfair Display;
 }
 .post-card-text{
-    max-height: 40px;
-    font-size: 14px;
+    font-size: 19px;
     overflow: hidden;
+    font-family: Muli !important;
     margin: 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
