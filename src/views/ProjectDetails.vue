@@ -3,44 +3,34 @@
         <nav aria-label="breadcrumb" class="breadcrumb-bar">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-                <li class="breadcrumb-item active" aria-current="page">Post Details</li>
+                <li class="breadcrumb-item active" aria-current="page">Project Details</li>
             </ol>
         </nav>
         <div class="card-body">
-            <h5 class="card-title">{{post.title}}</h5>
-            <p class="card-text">{{post.body}}</p>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="comments mt-3">
-                    <PostComments />
-                </div>
-            </div>
+            <h5 class="card-title">{{Project.title}}</h5>
+            <p class="card-text">{{Project.body}}</p>
         </div>
     </div>
 </template>
 <script lang="ts">
 import axios from "axios";
-import Vue from 'vue';
-import PostComments from "@/views/PostComments.vue";
 
 export default {
-    name: "PostDetails",
+    name: "ProjectDetails",
     components: {
-        PostComments
     },
 
     data(){
         return{
             id: this.$route.params.id,
-            post: [],
+            Project: [],
             errors: [],
         };
     },
     created() {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${this.id}`)
+        axios.get(`https://jsonplaceholder.typicode.com/Posts/${this.id}`)
         .then(res => {
-        this.post = res.data;
+        this.Project = res.data;
         })
         .catch(e => {
         this.errors.push(e);

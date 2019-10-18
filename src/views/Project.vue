@@ -1,13 +1,13 @@
 <template>
-    <div class="post-wrapper row">
-        <div class="col-md-4" v-for="post of posts" :key="post.id">
-            <router-link :to="`/post-details/${post.id}`">
-                <div class="post-card">
-                    <div class="post-card-body">
+    <div class="Project-wrapper row">
+        <div class="col-md-4" v-for="Project of Projects" :key="Project.id">
+            <router-link :to="`/Project-details/${Project.id}`">
+                <div class="Project-card">
+                    <div class="Project-card-body">
                         <img src="../assets/banner.jpg"/>
-                        <div class="post-desc">
-                            <div class="post-card-title">{{post.title}}</div>
-                            <p class="post-card-text"><small class="text-muted">{{post.body}}</small></p>
+                        <div class="Project-desc">
+                            <div class="Project-card-title">{{Project.title}}</div>
+                            <p class="Project-card-text"><small class="text-muted">{{Project.body}}</small></p>
                         </div>
                     </div>
                 </div>
@@ -16,21 +16,20 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
 
 export default{
-    name: "PostList",
-    props: ["posts"]
+    name: "Project",
+    props: ["Projects"]
 }
 </script>
 <style scoped>
-.post-wrapper{
+.Project-wrapper{
     display: flex;
     flex-flow: row wrap;
     margin: 0px -20px;
     animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.post-card{
+.Project-card{
     box-shadow: 0px 0px 10px 0px rgba(39,49,65,0.1);
     margin-bottom: 40px;
     max-height: 300px;
@@ -39,21 +38,21 @@ export default{
     transition: 0.45s;
     background-color: #fff;
 }
-.post-card:hover{
+.Project-card:hover{
     box-shadow: 0px 0px 30px 0px rgba(39,49,65,0.2);
 }
-.post-card-body img{
+.Project-card-body img{
     width: 100%;
     max-height: 188px;
     object-fit: cover;
 }
-.post-desc{
+.Project-desc{
     padding: 30px;
 }
 a{
     text-decoration: none;
 }
-.post-card-title{
+.Project-card-title{
     font-size: 18px;
     width: 100%;
     overflow: hidden;
@@ -61,7 +60,7 @@ a{
     white-space: nowrap;
     font-family: Playfair Display;
 }
-.post-card-text{
+.Project-card-text{
     font-size: 19px;
     overflow: hidden;
     font-family: Muli !important;

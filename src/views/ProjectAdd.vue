@@ -1,8 +1,8 @@
 <template>
   <div>
-    <form @submit.prevent="addPost">
+    <form @submit.prevent="addProject">
       <div class="form-group">
-        <label>Post Title</label>
+        <label>Project Title</label>
         <input
           type="text"
           class="form-control"
@@ -12,24 +12,23 @@
         />
       </div>
       <div class="form-group">
-        <label>Post About</label>
+        <label>Project About</label>
         <textarea
           type="text"
           v-model="body"
           name="body"
           class="form-control"
-          placeholder="Enter Post About Texts"
+          placeholder="Enter Project About Texts"
         />
       </div>
-      <button type="submit" class="btn btn-primary btn-lg">Submit Post</button>
+      <button type="submit" class="btn btn-primary btn-lg">Submit Project</button>
     </form>
   </div>
 </template>
 <script>
-import Vue from "vue";
 
 export default {
-  name: "PostAdd",
+  name: "ProjectAdd",
 
   data(){
     return{
@@ -39,13 +38,13 @@ export default {
   },
 
   methods: {
-    addPost(){
-      const newPost = {
+    addProject(){
+      const newProject = {
         title: this.title,
         body: this.body,
       };
       // Emiting Value from Forms to home
-      this.$emit("add-post", newPost);
+      this.$emit("add-Project", newProject);
       (this.title = ""), (this.body = "");
     }
   },

@@ -17,11 +17,10 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
 import axios from "axios";
 
 export default{
-    name: "PostComments",
+    name: "ProjectComments",
 
     data(){
         return{
@@ -31,7 +30,7 @@ export default{
         };
     },
     created() {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${this.id}/comments?_limit=30`)
+        axios.get(`https://jsonplaceholder.typicode.com/Posts/${this.id}/comments?_limit=30`)
         .then(res => {
         this.comments = res.data;
         })

@@ -8,7 +8,7 @@
               <router-link to="/" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/about" class="nav-link">About</router-link>
+              <router-link to="/all-Project" class="nav-link">All Project</router-link>
             </li>
           </ul>
       </div>
@@ -17,7 +17,7 @@
       <div class="info-container">
         <div>
           <div class="info-title">What is Voluntary Provident Fund Scheme?</div>
-          <div class="post-info">
+          <div class="Project-info">
             <img src="../assets/logo.png"/>
             <div>
               <span>Vivek Singh</span>
@@ -90,30 +90,30 @@ export default {
     font-weight: 400;
     color: #fff;
 }
-.post-info{
+.Project-info{
   display: flex;
   margin-top: 10px;
 }
-.post-info img{
+.Project-info img{
   max-width: 50px;
   height: 50px;
   border-radius: 100%;
   border: 1px solid #fff;
   margin-right: 10px;
 }
-.post-info div{
+.Project-info div{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.post-info small, .post-info span{
+.Project-info small, .Project-info span{
   display: block;
   color: #fff;
 }
-.post-info small{
+.Project-info small{
   margin-top: 4px;
 }
-.post-info span{
+.Project-info span{
   font-size: 16px;
   line-height: 14px;
 }

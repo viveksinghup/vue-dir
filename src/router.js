@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import AllProject from './views/AllProject.vue'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
-import PostDetails from './views/PostDetails.vue'
+import ProjectDetails from './views/ProjectDetails.vue'
 
 Vue.use(Router)
 
@@ -16,14 +16,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/all-Project',
+      name: 'AllProject',
+      component: AllProject
     },
     {
-      path: '/post-details/:id',
-      name: 'PostDetails',
-      component: PostDetails
+      path: '/Project-details/:id',
+      name: 'ProjectDetails',
+      component: ProjectDetails
     }
   ]
 })
