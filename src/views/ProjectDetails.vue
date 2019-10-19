@@ -13,28 +13,28 @@
     </div>
 </template>
 <script lang="ts">
-import axios from "axios";
+// import axios from "axios";
 
 export default {
     name: "ProjectDetails",
+    props: ["Project"],
     components: {
     },
 
     data(){
         return{
-            id: this.$route.params.id,
-            Project: [],
+            id: '',
             errors: [],
         };
     },
     created() {
-        axios.get(`https://jsonplaceholder.typicode.com/Posts/${this.id}`)
-        .then(res => {
-        this.Project = res.data;
-        })
-        .catch(e => {
-        this.errors.push(e);
-        })
+        // axios.get(`https://jsonplaceholder.typicode.com/Posts/${this.id}`)
+        // .then(res => {
+        // this.Project = res.data;
+        // })
+        // .catch(e => {
+        // this.errors.push(e);
+        // })
     }
 }
 

@@ -1,7 +1,7 @@
 <template>
     <div class="Project-wrapper row">
-        <div class="col-md-4" v-for="Project of Projects" :key="Project.id">
-            <router-link :to="`/Project-details/${Project.id}`">
+        <div class="col-md-4" @click="onClicked(Project.id)" v-for="Project of Projects" :key="Project.id">
+            <!-- <router-link :to="`/Project-details/${Project.id}`"> -->
                 <div class="Project-card">
                     <div class="Project-card-body">
                         <img src="../assets/banner.jpg"/>
@@ -11,7 +11,7 @@
                         </div>
                     </div>
                 </div>
-            </router-link>
+            <!-- </router-link> -->
         </div>
     </div>
 </template>
@@ -19,7 +19,13 @@
 
 export default{
     name: "Project",
-    props: ["Projects"]
+    props: ["Projects"],
+
+    methods: {
+        onClicked (event) {
+            this.$emit('clicked', event)
+        }
+    }
 }
 </script>
 <style scoped>
@@ -27,7 +33,6 @@ export default{
     display: flex;
     flex-flow: row wrap;
     margin: 0px -20px;
-    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .Project-card{
     box-shadow: 0px 0px 10px 0px rgba(39,49,65,0.1);
@@ -68,13 +73,4 @@ a{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-@keyframes slide-top {
-  0% {
-    transform: translateY(140px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 </style>
